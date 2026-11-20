@@ -1,0 +1,536 @@
+
+ ==================================
+   CASE CRUSH - GLOBAL STYLESHEET
+================================== */
+
+/* 1. COLOUR PALETTE */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Charis+SIL:wght@400;700&display=swap');
+:root {
+    --baby-pink: #F6C9DA;
+    --soft-pink: #FCE7EF;
+    --baby-blue: #C9E4F5;
+    --powder-blue: #EAF4FA;
+    --white: #FFFFFF;
+    --dark: #45424A;
+    --dusty-rose: #C77F9D;
+}
+
+
+/* 2. GENERAL PAGE SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Charis SIL', serif;
+    font-size: 17px;
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* 3. NAVIGATION BAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-family: 'Allura', cursive;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--dusty-rose);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--dusty-rose);
+}
+
+
+
+/* 4. BUTTONS */
+
+.button {
+    display: inline-block;
+    font-family: 'Charis SIL', serif;
+    padding: 13px 25px;
+    border-radius: 8px;
+    background-color: #FCE7EF;
+    color: #45424A;
+    font-weight: bold;
+    border: 2px solid #C77F9D;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #C9E4F5;
+    border-color: #C9E4F5;
+    transform: translateY(-3px);
+}
+
+
+/* 5. HOMEPAGE HERO SECTION */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.30),
+                        rgba(255,255,255,0.45)),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-family: 'Allura', cursive;
+    font-size: clamp(52px, 8vw, 88px);
+    font-weight: 700;
+    color: #45424A;
+    text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-family: 'Charis SIL', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #45424A;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+
+/* 6. GENERAL SECTIONS */
+
+.section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-family: 'Allura', cursive;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #777;
+}
+
+
+/* 7. PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product-card {
+    background-color: #fce7ef;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    background-color: #fce7ef;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.10);
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.06);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 8px;
+}
+
+.price {
+    font-family: 'Allura', cursive;
+    color: var(--dusty-rose);
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+/* 8. PAGE BANNERS */
+
+.page-banner {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(
+        120deg,
+        var(--soft-pink),
+        var(--powder-blue)
+    );
+}
+
+.page-banner h1 {
+    font-family: 'Allura', cursive;
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+
+/* 9. ABOUT PAGE */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-layout img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.about-layout img:hover {
+    transform: scale(1.03);
+}
+
+
+/* 10. GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    background-color: #FCE7EF;
+    overflow: hidden;
+    border-radius: 14px;
+    position: relative;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background-color: #FCE7EF;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    background-color: #FCE7EF;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+.gallery-item:hover img {
+    background-color: #FCE7EF;
+    transform: scale(1.12);
+}
+
+
+
+/* 11. VIDEO */
+
+.video-container {
+    max-width: 850px;
+    margin: 35px auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+
+/* 12. CUSTOMIZER */
+
+.customizer-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.customizer-form,
+.preview-panel {
+    padding: 28px;
+    background-color: var(--soft-pink);
+    border-radius: 18px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label,
+.form-group legend {
+    font-family: 'Allura', cursive;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E3B9CB;
+    border-radius: 9px;
+    font: inherit;
+    background-color: white;
+}
+
+.form-group input[type="color"] {
+    width: 65px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 5px 12px 5px 0;
+    font-weight: normal;
+    font-family: 'Allura', cursive;
+}
+
+.phone-preview {
+    width: 190px;
+    height: 360px;
+    border: 9px solid #FFFFFF;
+    border-radius: 30px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    background-color: var(--baby-pink);
+}
+
+.preview-name {
+    font-family: 'Allura', cursive;
+    font-size: 23px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+    padding: 10px;
+}
+
+.preview-decorations {
+    font-size: 26px;
+    position: absolute;
+    top: 35%;
+}
+
+.preview-image {
+    max-width: 90%;
+    max-height: 100px;
+    object-fit: contain;
+    display: none;
+    margin: 10px auto;
+}
+
+.summary {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.summary p {
+    margin: 7px 0;
+}
+
+
+/* 13. FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 45px 20px;
+    background-color: var(--powder-blue);
+}
+
+.footer h2 {
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+
+/* 14. RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-layout,
+    .customizer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
+
+@media (max-width: 500px)
+
+    .product-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .page-banner h1 {
+        font-size: 36px;
+    }
+
+    .section {
+        padding: 55px 5%; }
+/* FADE-IN ANIMATION */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeIn 1s ease;}
+
+
+
+.blue-page {
+    background-color: #C9E4F5;
+}

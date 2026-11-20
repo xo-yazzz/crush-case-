@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize | CASE CRUSH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="blue-page">
+    <header class="navbar">
+        <a href="index.html" class="logo">CASE CRUSH<span>.</span></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="customize.html" class="active">Customize</a>
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <main>
+        
+<section class="page-banner">
+    <h1>Design Your Dream Case</h1>
+    <p>Your creativity. Your colours. Your CASE CRUSH.</p>
+</section>
+
+
+<section class="section">
+
+    <div class="customizer-layout">
+
+        <!-- LEFT SIDE: FORM -->
+
+        <form class="customizer-form" id="designForm">
+
+            <h2>Build Your Design</h2>
+
+            <br>
+
+            <!-- PHONE MODEL -->
+            <div class="form-group">
+
+                <label for="phoneModel">1. Choose Your Phone Model</label>
+
+                <select id="phoneModel">
+                    <option>iPhone 17 Pro</option>
+                    <option>iPhone 17 Pro Max</option>
+                    <option>iPhone 16</option>
+                    <option>iPhone 16 Pro</option>
+                    <option>Samsung Galaxy S25 Ultra</option>
+                    <option>Samsung Galaxy S25</option>
+                </select>
+
+            </div>
+
+
+            <!-- BASE COLOUR -->
+            <div class="form-group">
+
+                <label for="caseColor">2. Choose Your Case Colour</label>
+
+                <input type="color" id="caseColor" value="#F6C9DA">
+
+            </div>
+
+
+            <!-- DECORATIONS -->
+            <fieldset class="form-group">
+
+                <legend>3. Choose Your Decorations</legend>
+
+                <label class="choice">
+                    <input type="checkbox" name="decoration" value="Rhinestones">
+                    Rhinestones
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="decoration" value="Pearls">
+                    Pearls
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="decoration" value="Bows">
+                    Bows
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="decoration" value="Charms">
+                    Charms
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="decoration" value="Cream decorations">
+                    Cream decorations
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="decoration" value="Stickers">
+                    Stickers
+                </label>
+
+            </fieldset>
+
+
+            <!-- FINISH -->
+            <fieldset class="form-group">
+
+                <legend>4. Choose Your Finish</legend>
+
+                <label class="choice">
+                    <input type="radio" name="finish" value="Glossy" checked>
+                    Glossy
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="finish" value="Matte">
+                    Matte
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="finish" value="Glitter">
+                    Glitter
+                </label>
+
+            </fieldset>
+
+
+            <!-- NAME -->
+            <div class="form-group">
+
+                <label for="customerName">5. Add Your Name or Initials</label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name or initials"
+                    maxlength="20">
+
+            </div>
+
+
+            <!-- IMAGE UPLOAD -->
+            <div class="form-group">
+
+                <label for="inspirationImage">6. Upload an Inspiration Image</label>
+
+                <input
+                    type="file"
+                    id="inspirationImage"
+                    accept="image/*">
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+            <div class="form-group">
+
+                <label for="description">7. Describe Your Design</label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe exactly how you want your case to look..."></textarea>
+
+            </div>
+
+
+            <button type="button" class="button" id="createButton">
+                CREATE MY CASE
+            </button>
+
+        </form>
+
+
+        <!-- RIGHT SIDE: PREVIEW -->
+
+        <div class="preview-panel">
+
+            <h2>Your Design Preview</h2>
+
+            <p>Watch your design come together.</p>
+
+            <div class="phone-preview" id="phonePreview">
+
+                <div class="preview-decorations" id="previewDecorations">
+                    ✦ ♡ ✧
+                </div>
+
+                <div>
+                    <img
+                        id="previewImage"
+                        class="preview-image"
+                        alt="Your uploaded design inspiration">
+
+                    <div class="preview-name" id="previewName">
+                        YOUR NAME
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="summary">
+
+                <h3>Your Design Summary</h3>
+
+                <div id="orderSummary">
+                    <p>Your selected options will appear here.</p>
+                </div>
+
+            </div>
+
+            <p id="confirmationMessage" aria-live="polite"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <h2>CASE CRUSH.</h2>
+        <p>Your case. Your crush. Your creation.</p>
+        <p>&copy; 2026 CASE CRUSH. All rights reserved.</p>
+    </footer>
+
+    <script src="customizer.js"></script>
+</body>
+</html>
